@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.proyectojava;
+
+public class Proyectojava {
+    public static void main(String[] args) {
+        UsuarioDAO dao = new UsuarioDAO();
+
+        // Insertar usuario
+        Usuario usuario = new Usuario(1, "Fernanda", "fernanda@email.com", "123456789");
+        dao.insertar(usuario);
+
+        // Consultar todos los usuarios
+        for (Usuario u : dao.consultarTodos()) {
+            System.out.println("ID: " + u.getId() + ", Nombre: " + u.getNombre() +
+                               ", Correo: " + u.getCorreo() + ", Teléfono: " + u.getTelefono());
+        }
+
+        // Actualizar usuario
+        usuario.setNombre("Fernanda Actualizada");
+        dao.actualizar(usuario);
+        
+         // Eliminar usuario
+        dao.eliminar(usuario.getId());
+    }
+}
+
