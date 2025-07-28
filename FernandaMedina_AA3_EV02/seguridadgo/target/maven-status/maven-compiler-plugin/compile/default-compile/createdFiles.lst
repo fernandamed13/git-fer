@@ -1,0 +1,4 @@
+com\guardiango\controller\AlertaController.class
+com\guardiango\config\WebAppConfig.class
+com\guardiango\dao\AlertaDAO.class
+com\guardiango\model\Alerta.class
